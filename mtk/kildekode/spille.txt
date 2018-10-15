@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Moss Tennisklubb</title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Niramit:400,600,700|Graduate" rel="stylesheet">
+</head>
+
+<body id="top">
+    <nav>
+        <a href="index.html">Forside</a>
+        <a href="klubb.html">Om klubben</a>
+        <a href="spille.html">Spille tennis</a>
+    </nav>
+
+    <div class="top-banner background">
+        <h1>Spille tennis</h1>
+    </div>
+
+    <section>
+        <div class="container">
+            <h2>Medlemsskap</h2>
+            <p>Meld deg inn i Moss Tennisklubb og få tilgang til en rekke medlemsfordeler og et nettverk av tennisinteresserte i alle aldre! Medlemsfordeler inkluderer gratis spill på utebanene, rabatterte priser for baneleie i hallen og gratis tilgang til vårt styrkerom.</p>
+            
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Pris</th>
+                </tr>
+                
+                <tr>
+                    <td>Barn under 12 år</td>
+                    <td>450 kr</td>
+                </tr>
+                
+                <tr>
+                    <td>Barn 12-18 år</td>
+                    <td>550 kr</td>
+                </tr>
+                
+                <tr>
+                    <td>Voksne</td>
+                    <td>1525 kr</td>
+                </tr>
+                
+                <tr>
+                    <td>Familiemedlemsskap</td>
+                    <td>2415 kr</td>
+                </tr>
+                
+                <tr>
+                    <td>Støttemedlem</td>
+                    <td>340 kr</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <footer>
+        <div>
+            <h3>Adresse:</h3>
+            <p>Moss Tennisklubb</p>
+            <p>Jederveien 67</p>
+            <p>1512 Moss</p>
+        </div>
+        
+        <div>
+            <h3>Kontakt:</h3>
+            <p>69 27 08 10</p>
+            <p><a href="mailto:post@mosstennis.no">post@mosstennis.no</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

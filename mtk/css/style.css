@@ -1,0 +1,180 @@
+body {
+    font-family: "Niramit", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+    background-color: #F9F9F9;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #EEE;
+    font-size: 68px;
+    font-weight: 200;
+    font-family: "Graduate";
+}
+
+h2 {
+    font-size: 36px;
+    font-family: "Graduate";
+    font-weight: 200;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #FFF;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 0px 8px #666;
+    z-index: 1;
+}
+
+nav a {
+    color: #F66821;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 25px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    line-height: 60px;
+}
+
+nav a:hover {
+    background-color: #EEE;
+}
+
+nav a img {
+    height: 100%;
+}
+
+footer {
+    color: #DDD;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+footer div {
+    margin: 20px 100px 40px 100px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 5px 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2%;
+}
+
+.background {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../bilder/bakgrunn.jpg");
+    background-position: left center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flex {
+    display: flex;
+    margin: 0 -15px;
+}
+
+.flex div {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0 15px;
+}
+
+.flex div img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.fullscreen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-banner {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-banner h1 {
+    position: relative;
+    top: 30px;
+}
+
+.menu h2 {
+    margin-bottom: 5px;
+}
+
+.menu p {
+    margin: 0 10px 30px 10px;
+    text-align: center;
+}
+
+.menu a {
+    color: inherit;
+}
+
+.menu .flex div {
+    margin: 40px 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 0px #666;
+    transition-duration: 0.1s;
+}
+
+.menu .flex div:hover {
+    transform: scale(1.03);
+}
+
+@keyframes intro {
+    from {top: 100px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+
+.animate {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    animation-name: intro;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tittel</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Lar oss bruke Æ, Ø og Å -->
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="menu">
+        <span>
+            <a href="/">Startside</a>
+            <a href="/side2/">Side 2</a>
+            <a href="/side3/">Side 3</a>
+        </span>
+    </div>
+    
+    <h1>Still a website, fucker</h1>
+    
+    <div class="center">
+        <button onclick="run()">Ikke trykk her</button>
+    </div>
+
+    <img id="image" src="https://gb.trouwnutrition.co.uk/siteassets/bulletins/farm-o-san/2016/pro-keto-dry-launch-mar-16/fos_werk_koevrij---cropped-250.png">
+
+    <p><a href="/">Gå til forsiden!</a></p>
+    
+    <script>
+        var count = 0;
+        function run() {
+            if(count % 2 == 0) {
+                document.body.style.animation = "test 0.2s alternate infinite";
+                document.getElementById("image").style.animation = "test2 0.2s linear alternate infinite";
+            }
+            else {
+                document.body.style.animation = ""
+                document.getElementById("image").style.animation = ""
+            }
+            count++
+        }
+    </script>
+</body>
+
+</html>

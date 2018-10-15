@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Moss Tennisklubb</title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Niramit:400,600,700|Graduate" rel="stylesheet">
+</head>
+
+<body id="top">
+    <nav>
+        <a href="index.html">Forside</a>
+        <a href="klubb.html">Om klubben</a>
+        <a href="spille.html">Spille tennis</a>
+    </nav>
+
+    <div class="top-banner background">
+        <h1>Om klubben</h1>
+    </div>
+
+    <section>
+        <div class="container">
+            <h2>Historie</h2>
+
+            <div class="flex">
+                <div>
+                    <img src="bilder/medlemmer.jpg">
+                </div>
+
+                <div>
+                    <p>Moss Tennisklubb ble etablert 13. mai 1929. Stifterne var Arne Tellefsen, Fridtjof Koren og Willy Strømmen.</p>
+                    <p>Trening foregikk da på 3 grusbaner på Grimserød gård ut mot Helgerødgaten. I 1975 innviet klubben et nytt og praktfult anlegg på Ramberg bestående av 4 grusbaner, barnebane og klubbhus. I 1982 ble det mulighet for innendørstennis i bobla som på vinterstid ble montert over to grusbaner.</p>
+                    <p>1989 ble en milepel for klubben da Moss Tennissenter kunne åpnes for spill. En fantastisk innendørshall med limtrekontruksjon og trepanel i vegger og tak med kafeteria, peisestue og styrerom og en festsal i 2.etasje.</p>
+                    <p>Klubben har ca. 300 medlemmer og er den ledende tennisklubben i Østfold. MTK har mer enn 70 juniorer i fast trening og opp gjennom tidende har klubben kapret mer enn 50 NM-titler i aldersbestemte klasser.</p>
+                </div>
+            </div>
+
+            <h2>Vårt anlegg</h2>
+
+            <div class="flex">
+                <div>
+                    <h3>Innebaner</h3>
+                    <p>Tennishallen har tre flotte hard court-baner som er tilgjengelige hele året. Dekket er et moderne Plexipave-dekke som ble lagt nytt i 2016. Åpning av innendørshallen ble en milepæl for klubben da den be åpnet i 1989.</p>
+                </div>
+
+                <div>
+                    <h3>Utebaner</h3>
+                    <p>De to utebanene til Moss Tennisklubb er blant Norges beste utendørs grusbaner. Utebanene kan benyttes gratis av alle medlemmer hele sommersesongen! </p>
+                </div>
+
+                <div>
+                    <h3>Klubbhus</h3>
+                    <p>I tillegg til tennisbanene har vi et flott klubbhus med garderrober, kiosk og flere store oppholdsrom. Vi har også et supert treningsrom med spinning-sykler og styrkeapparater. Treningsrommet er selvfølgelig gratis å bruke for alle medlemmer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div>
+            <h3>Adresse:</h3>
+            <p>Moss Tennisklubb</p>
+            <p>Jederveien 67</p>
+            <p>1512 Moss</p>
+        </div>
+        
+        <div>
+            <h3>Kontakt:</h3>
+            <p>69 27 08 10</p>
+            <p><a href="mailto:post@mosstennis.no">post@mosstennis.no</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

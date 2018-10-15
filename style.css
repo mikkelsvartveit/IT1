@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    background-color: #EEE;
+    color: #333;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 200;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 42px;
+    color: #EEE;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox a {
+    display: flex;
+    margin: 0;
+    color: #EEE;
+    text-align: center;
+    font-weight: 600;
+}
+
+.col-3 {
+    flex-basis: 33.33%;
+    height: 25vw;
+    box-sizing: border-box;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    display: flex;
+}
+
+.back {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flexbox a:hover .front {
+    display: none;
+}
+
+.flexbox a:hover .back {
+    display: flex;
+}
+
+/* https://www.color-hex.com/color-palette/65769 */
+
+#intro .front {
+    background-color: #71bc78;
+}
+
+#intro .back {
+    background-color: #508C56;
+}
+
+#audir8 .front {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(audir8/bilder/r8-foran.jpg);
+    background-size: cover;
+}
+
+#audir8 .back {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(audir8/bilder/r8-foran.jpg);
+    background-size: cover;
+}
+
+#mtk .front {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(mtk/bilder/spiller.jpg);
+    background-size: cover;
+}
+
+#mtk .back {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(mtk/bilder/spiller.jpg);
+    background-size: cover;
+}

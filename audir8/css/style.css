@@ -1,0 +1,175 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FAFAFA;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Raleway";
+    color: #333;
+    font-weight: 200;
+    font-size: 80px;
+}
+
+h2 {
+    font-family: "Raleway";
+    font-weight: 400;
+}
+
+h3 {
+    font-family: "Open Sans";
+    font-weight: 600;
+}
+
+a {
+    color: #119ABF;
+    text-decoration: none;
+}
+
+audio {
+    width: 100%;
+}
+
+nav {
+    background-color: transparent;
+    display: block;
+    position: fixed;
+    z-index: 2;
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+    text-align: center;
+}
+
+nav span a {
+    color: #FEFEFE;
+    font-weight: 600;
+    margin: 0 15px;
+}
+
+nav span a:hover {
+    text-decoration: underline;
+}
+
+nav span a img {
+    height: 18px;
+    vertical-align: middle;
+}
+
+.nav-content {
+    margin: auto;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding: 40px 0;
+}
+
+.intro {
+    max-width: 800px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+
+.intro p {
+    font-weight: 600;
+}
+
+.background-dark {
+    background-color: #222;
+}
+
+.background-image {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../bilder/r8-stor.jpg");
+    background-position: left center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.row div {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 33.33%;
+}
+
+@media (max-width: 600px) {
+    .col-2 {
+        width: 100%;
+    }
+    
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .col-3 {
+        width: 100%;
+    }
+}
+
+.row div img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 0px;
+    transition-duration: 0.2s;
+}
+
+.row div img:hover {
+    transform: scale(1.05);
+}
+
+.fullscreen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen h1 {
+    font-family: "Raleway";
+    color: white;
+    font-weight: 100;
+    font-size: 96px;
+}
+
+.container video {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+}

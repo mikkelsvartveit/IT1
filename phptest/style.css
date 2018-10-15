@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FAFAFA;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 40px 10% 40px 10%;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Raleway";
+    color: #333;
+    font-weight: 200;
+    font-size: 80px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 60px;
+    font-family: "Raleway";
+    font-size: 32px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: "Open Sans";
+    font-weight: 600;
+}
+
+a {
+    color: #119ABF;
+    text-decoration: none;
+}
+
+img {
+    width: 200px;
+}
