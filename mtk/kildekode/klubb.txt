@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -70,6 +70,14 @@
             <h3>Kontakt:</h3>
             <p>69 27 08 10</p>
             <p><a href="mailto:post@mosstennis.no">post@mosstennis.no</a></p>
+        </div>
+        
+        <div>
+            <h3>Kildekode:</h3>
+            <p><a href="kildekode/index.txt">index.html</a></p>
+            <p><a href="kildekode/klubb.txt">klubb.html</a></p>
+            <p><a href="kildekode/spille.txt">spille.html</a></p>
+            <p><a href="kildekode/style.txt">style.css</a></p>
         </div>
     </footer>
 </body>

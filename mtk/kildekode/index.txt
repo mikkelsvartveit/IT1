@@ -1,15 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Moss Tennisklubb</title>
-
     <meta charset="utf-8">
+    
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Laster ned skrifttyper fra til Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Niramit:400,600,700|Graduate" rel="stylesheet">
 </head>
 
-<body id="top">
+<body>
     <nav>
         <a href="index.html">Forside</a>
         <a href="klubb.html">Om klubben</a>
@@ -17,7 +19,7 @@
     </nav>
 
     <div class="fullscreen background">
-        <h1>Moss Tennisklubb</h1>
+        <h1 class="animate">Moss Tennisklubb</h1>
     </div>
 
     <section class="menu">
