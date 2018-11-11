@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Hangman</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Hangman</h1>
+    
+    <p>Ord: 
+        <span class="words">E _ _ E K _ K E</span>
+    </p>
+    
+    <p>Feil bokstaver: 
+        <span id="wrongLetters">A, B, C, D</span>
+    </p>
+    
+    <p>Gjenstående liv: 
+        <span id="lives"></span>
+    </p>
+    
+    <img id="hangman">
+    
+    <p>Skriv inn bokstav: 
+        <input type="text" id="letterInput" name="letter">
+        <button type="button" onclick="enterLetter()">Enter</button>
+    </p>
+    <button type="button" onclick="start()">Restart</button>
+
+    <script src="hangman.js"></script>
+</body>
+
+</html>
