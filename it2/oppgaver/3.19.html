@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Javascript oppgaver</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Oppgave 3.19</h1>
+    <p></p>
+    
+    <script>
+        var alfabet = "abcdefghijklmnopqrstuvwxyzæøå";
+        var lengde = Math.ceil(Math.random() * 7 + 3);
+        var ord = "";
+        
+        for(var i = 0; i < lengde; i++) {
+            var bokstavIndeks = Math.floor(Math.random() * 28);
+            ord += alfabet[bokstavIndeks];
+        }
+        
+        document.write(ord);
+    </script>
+</body>
+
+</html>

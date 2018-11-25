@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Javascript oppgaver</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Oppgave 3.20 - krypteringsprogram</h1>
+    <p>
+        Krypteringsnøkkel: <input type="text" id="key">
+    </p>
+    
+    <p>
+        <textarea rows="6" cols="41" id="text">Skriv inn tekst her!</textarea>
+    </p>
+    
+    <p>
+        <button onclick="button(true)">Kryptér</button>
+        <button onclick="button(false)">Dekryptér</button>
+    </p>
+    
+    <script>
+        const TEXT = "simen er en slækk banan";
+        const ENCRYPTION_KEY = "simen";
+        const ALPHABET = "abcdefghijklmnopqrstuvwxyzæøå";
+        
+        function generateAlphabet(key) {
+            var remainingAlphabet = ALPHABET;
+            var newAlphabet = "";
+
+            for(var i = 0; i < key.length; i++) {
+                if(!newAlphabet.includes(key[i])) {
+                    remainingAlphabet = remainingAlphabet.replace(key[i], "");
+                    newAlphabet += key[i];
+                }
+            }
+
+            newAlphabet += remainingAlphabet;
+            console.log("Generated alphabet: " + newAlphabet);
+            return newAlphabet;
+        }
+        
+        function encrypt(text, key) {
+            var encryptedAlphabet = generateAlphabet(key);
+            var newText = "";
+            
+            for(var i = 0; i < text.length; i++) {
+                var index = ALPHABET.indexOf(text[i]);
+                
+                if(index > -1) {
+                    newText += encryptedAlphabet[index];
+                } else {
+                    newText += text[i];
+                }
+            }
+            
+            return newText;
+        }
+        
+        function decrypt(text, key) {
+            var encryptedAlphabet = generateAlphabet(key);
+            var newText = "";
+            
+            for(var i = 0; i < text.length; i++) {
+                var index = encryptedAlphabet.indexOf(text[i]);
+                
+                if(index > -1) {
+                    newText += ALPHABET[index];
+                } else {
+                    newText += text[i];
+                }
+            }
+            
+            return newText;
+        }
+        
+        function button(encryption) {
+            var key = document.getElementById("key").value.toLowerCase();
+            var text = document.getElementById("text").value.toLowerCase();
+            var result;
+            
+            if(encryption) {
+                result = encrypt(text, key);
+            } else {
+                result = decrypt(text, key);
+            }
+            
+            document.getElementById("text").value = result;
+        }
+    </script>
+</body>
+
+</html>

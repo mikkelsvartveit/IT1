@@ -1,0 +1,29 @@
+body {
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    background-color: #FAFAFA;
+}
+
+.page {
+    width: 1000px;
+    margin: auto;
+}
+
+.banner {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(bilder/bakgrunn.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Baumans", cursive;
+    font-size: 64px;
+    font-weight: 200;
+    color: white;
+}
