@@ -108,3 +108,15 @@ a {
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(mtk/bilder/spiller.jpg);
     background-size: cover;
 }
+
+#sportssenteret .front {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(sportssenteret/bilder/bakgrunn.jpg);
+    background-size: cover;
+}
+
+#sportssenteret .back {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(sportssenteret/bilder/bakgrunn.jpg);
+    background-size: cover;
+}

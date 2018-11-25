@@ -1,13 +1,68 @@
 body {
     font-size: 18px;
-    font-family: "Rubik", sans-serif;
+    font-family: "Nunito", sans-serif;
     margin: 0;
-    background-color: #FAFAFA;
+    background-color: #EEE;
+    color: #333;
+}
+
+h1 {
+    font-family: "Baumans", cursive;
+    font-size: 64px;
+    font-weight: 200;
+    color: white;
+}
+
+a {
+    color: #1d96ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .page {
-    width: 1000px;
-    margin: auto;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    background-color: #FAFAFA;
+    box-shadow: 0 0 30px #888;
+}
+
+.nav {
+    padding: 0 15px 0 10px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+}
+
+.nav a {
+    display: block;
+    float: left;
+    line-height: 100px;
+    padding: 0 25px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #EEE;
+    transition-duration: 0.1s;
+}
+
+.nav a:hover {
+    color: #1d96ff;
+}
+
+.left a {
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav img {
+    height: 60px;
 }
 
 .banner {
@@ -21,9 +76,17 @@ body {
     background-size: cover;
 }
 
-h1 {
-    font-family: "Baumans", cursive;
-    font-size: 64px;
-    font-weight: 200;
-    color: white;
+.content {
+    padding: 30px 50px;
+}
+
+.ads {
+    background-color: #222;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ads img {
+    height: 100px;
 }
