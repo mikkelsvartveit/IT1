@@ -1,6 +1,7 @@
 body {
     font-size: 18px;
     font-family: "Nunito", sans-serif;
+    line-height: 1.4;
     margin: 0;
     background-color: #EEE;
     color: #333;
@@ -10,6 +11,7 @@ h1 {
     font-family: "Baumans", cursive;
     font-size: 64px;
     font-weight: 200;
+    text-transform: uppercase;
     color: white;
 }
 
@@ -20,6 +22,37 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+ul {
+    list-style-image: url(bilder/bullet.png);
+}
+
+.content {
+    padding: 30px 50px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex div {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.flex img {
+    width: 100%;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.sykkelbilde {
+    width: 400px;
+    float: right;
 }
 
 .page {
@@ -47,7 +80,7 @@ a:hover {
     text-transform: uppercase;
     text-decoration: none;
     color: #EEE;
-    transition-duration: 0.1s;
+    transition-duration: 0.2s;
 }
 
 .nav a:hover {
@@ -74,10 +107,6 @@ a:hover {
     background-image: url(bilder/bakgrunn.jpg);
     background-position: center;
     background-size: cover;
-}
-
-.content {
-    padding: 30px 50px;
 }
 
 .ads {
