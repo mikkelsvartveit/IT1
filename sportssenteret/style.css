@@ -87,7 +87,7 @@ ul {
     color: #1d96ff;
 }
 
-.left a {
+.logo a {
     display: block;
     height: 100%;
     display: flex;
@@ -107,6 +107,7 @@ ul {
     background-image: url(bilder/bakgrunn.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .ads {
