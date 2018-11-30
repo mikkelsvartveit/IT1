@@ -1,3 +1,8 @@
+html {
+    overflow: hidden;
+    height: 100%;    
+}
+
 body {
     font-size: 18px;
     font-family: "Nunito", sans-serif;
@@ -5,6 +10,8 @@ body {
     margin: 0;
     background-color: #EEE;
     color: #333;
+    overflow: auto;
+    height: 100%;
 }
 
 h1 {
