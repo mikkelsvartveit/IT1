@@ -35,7 +35,8 @@
                     <p>Vi arrangerer en stor konkurranse for våre besøkende. Premien er en ny sykkel fra Merida. Vi trekker ut vinneren i vår forretning 22.12.2018.</p>
 
                     <h2>Regler</h2>
-                    <p>Det eneste du trenger å gjøre er å besøke vår forening og fylle ut et registreringsskjema. Vi trekker ut den heldige vinneren blant de innleverte skjemaene. Lykke til!</p>
+                    <p>Det eneste du trenger å gjøre er å besøke vår forening og fylle ut et registreringsskjema. Vi trekker ut den heldige vinneren blant de innleverte skjemaene. Lykke til!
+                    <a href="deltakere.php">Vis deltakere.</a></p>
                 </div>
                 <div>
                     <img class="full-width" src="bilder/merida.jpg">
@@ -45,8 +46,11 @@
             <h2>Fyll ut skjema her!</h2>
             
             <form action="" method="post">
-                <h3>Navn</h3>
-                <input type="text" name="navn" placeholder="Fullt navn">
+                <h3>Fornavn</h3>
+                <input type="text" name="fornavn" placeholder="Fornavn">
+                
+                <h3>Etternavn</h3>
+                <input type="text" name="etternavn" placeholder="Etternavn">
                 
                 <h3>Telefon</h3>
                 <input type="text" name="telefon" placeholder="Telefon">
@@ -79,14 +83,16 @@
                 $tilkobling->set_charset("utf8");
 
                 if(isset($_POST["submit"])) {
-                    $navn = $_POST["navn"];
+                    $fornavn = $_POST["fornavn"];
+                    $etternavn = $_POST["etternavn"];
                     $telefon = $_POST["telefon"];
                     $s1 = $_POST["s1"];
                     $s2 = $_POST["s2"];
                     $s3 = $_POST["s3"];
 
-                    $sql = sprintf("INSERT INTO deltaker (navn, telefon, sporsmol1, sporsmol2, sporsmol3) VALUES ('$navn', '$telefon', '$s1', '$s2', '$s3')", 
-                    $tilkobling->real_escape_string($navn),
+                    $sql = sprintf("INSERT INTO deltaker (fornavn, etternavn, telefon, sporsmol1, sporsmol2, sporsmol3) VALUES ('$fornavn', '$etternavn', '$telefon', '$s1', '$s2', '$s3')", 
+                    $tilkobling->real_escape_string($fornavn),
+                    $tilkobling->real_escape_string($etternavn),
                     $tilkobling->real_escape_string($telefon),
                     $tilkobling->real_escape_string($s1),
                     $tilkobling->real_escape_string($s2),

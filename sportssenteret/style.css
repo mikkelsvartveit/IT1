@@ -28,6 +28,17 @@ ul {
     list-style-image: url(bilder/bullet.png);
 }
 
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+th, td {
+    border-collapse: collapse;
+    border: 1px solid #999;
+    padding: 3px 7px;
+}
+
 .content {
     padding: 30px 50px;
 }
