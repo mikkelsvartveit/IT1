@@ -1,0 +1,211 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    background-color: #F6F6F6;
+}
+
+h1 {
+    font-family: "Montserrat";
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #555;
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #555;
+}
+
+video {
+    width: 70%;
+    margin: 50px;
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightblue;
+    flex-direction: column;
+    background-image: url(img/bakgrunn.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.cover a {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    padding: 15px 20px;
+    border: 2px solid white;
+    background-color: transparent;
+    margin: 10px;
+    transition-duration: 0.2s;
+}
+
+.cover a:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+.col-2 {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.col-3 {
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    z-index: 2;
+    transition: all 0.2s;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.menu a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.menu a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+.menu-scrolled {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 10px #777;
+}
+
+.menu-scrolled a {
+    color: #444;
+    font-weight: 600;
+}
+
+.menu-scrolled a:after {
+    background: #444;
+}
+
+.menu-right {
+    float: right;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 30px 50px 30px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0px 1px 10px #777;
+}
+
+.card h3 {
+    font-family: "Montserrat";
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 25px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card p {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.card a {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #444;
+    padding: 10px 15px;
+    border: 2px solid #444;
+    margin: 20px 10px 10px 10px;
+    transition-duration: 0.2s;
+    text-align: center;
+    display: block;
+}
+
+.card a:hover {
+    color: #fff;
+    background-color: #444;
+}
