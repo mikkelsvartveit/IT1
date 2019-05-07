@@ -38,6 +38,10 @@ video {
     margin: 50px;
 }
 
+b {
+    font-weight: 600;
+}
+
 .cover {
     display: flex;
     justify-content: center;
@@ -187,6 +191,10 @@ video {
 .card p {
     text-align: center;
     margin: 0;
+}
+
+.card p.info {
+    margin-bottom: 10px;
     padding: 20px;
     height: 35px;
 }
@@ -210,4 +218,10 @@ video {
 .card a:hover {
     color: #fff;
     background-color: #444;
+}
+
+.card a.selected {
+    color: #fff;
+    background-color: #446E44;
+    border: 2px solid #446E44;
 }

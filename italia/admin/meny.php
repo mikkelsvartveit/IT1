@@ -9,9 +9,14 @@
 </head>
 
 <body>
-    <h1>Administrer meny</h1>
-    
     <?php
+    if (!isset($_SERVER['PHP_AUTH_USER']) || !($_SERVER['PHP_AUTH_USER'] == "admin" && $_SERVER['PHP_AUTH_PW'] == "mikkel")) {
+        header('WWW-Authenticate: Basic realm="My Realm"');
+        header('HTTP/1.0 401 Unauthorized');
+        echo '<b>Du må logge inn for å få tilgang til denne siden</b>';
+        exit;
+    }
+    
     $servernavn = "localhost";
     $brukernavn = "root";
     $passord = "";
@@ -30,6 +35,8 @@
         $tilkobling->query("DELETE FROM matrett WHERE idmatrett=$slettid");
     }
     ?>
+    
+    <h1>Administrer meny</h1>
     
     <div>
         <div>

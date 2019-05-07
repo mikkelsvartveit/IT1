@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Bestill mat - Italiensk restaurant</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Open+Sans:300,400,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Open+Sans:300,400,600" rel="stylesheet"> 
 </head>
 
 <body id="top">
@@ -55,11 +55,12 @@
             ?>
             
             <div class="col-3">
-                <div class="card">
+                <div class="card" id="<?php echo $row["idmatrett"] ?>">
                     <h3><?php echo $row["navn"] ?></h3>
                     <img src="<?php echo 'admin/upload/' . $row["bilde"]?>">
-                    <p><?php echo $row["informasjon"] ?></p>
-                    <a href="#">Velg rett</a>
+                    <p class="info"><?php echo $row["informasjon"] ?></p>
+                    <p><b><?php echo "kr " . $row["pris"] . ",-" ?></b></p>
+                    <a href="javascript:velgRett(<?php echo $row["idmatrett"] ?>)">Velg rett</a>
                 </div>
             </div>
             
@@ -76,11 +77,12 @@
             ?>
             
             <div class="col-3">
-                <div class="card">
+                <div class="card" id="<?php echo $row["idmatrett"] ?>">
                     <h3><?php echo $row["navn"] ?></h3>
                     <img src="<?php echo 'admin/upload/' . $row["bilde"]?>">
-                    <p><?php echo $row["informasjon"] ?></p>
-                    <a href="#">Velg rett</a>
+                    <p class="info"><?php echo $row["informasjon"] ?></p>
+                    <p><b><?php echo "kr " . $row["pris"] . ",-" ?></b></p>
+                    <a href="javascript:velgRett(<?php echo $row["idmatrett"] ?>)">Velg rett</a>
                 </div>
             </div>
             
@@ -97,11 +99,12 @@
             ?>
             
             <div class="col-3">
-                <div class="card">
+                <div class="card" id="<?php echo $row["idmatrett"] ?>">
                     <h3><?php echo $row["navn"] ?></h3>
                     <img src="<?php echo 'admin/upload/' . $row["bilde"]?>">
-                    <p><?php echo $row["informasjon"] ?></p>
-                    <a href="#">Velg rett</a>
+                    <p class="info"><?php echo $row["informasjon"] ?></p>
+                    <p><b><?php echo "kr " . $row["pris"] . ",-" ?></b></p>
+                    <a href="javascript:velgRett(<?php echo $row["idmatrett"] ?>)">Velg rett</a>
                 </div>
             </div>
             
@@ -110,8 +113,24 @@
     </div>
     
     <script>
-        var menuShowing = false;
+        var handlevogn = [];
         
+        function velgRett(id) {
+            var button = document.getElementById(id).getElementsByTagName("a")[0];
+            
+            if(!button.classList.contains("selected")) {
+                button.innerHTML = "Valgt!";
+                button.classList.add("selected");
+                handlevogn.push(id);
+            } else {
+                button.innerHTML = "Velg rett";
+                button.classList.remove("selected");
+                handlevogn.splice(handlevogn.indexOf(id), 1);
+            }
+        }
+        
+        // Gjør menyen hvit når brukeren scroller nedover
+        var menuShowing = false;
         window.onscroll = function() {
             var clientHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;

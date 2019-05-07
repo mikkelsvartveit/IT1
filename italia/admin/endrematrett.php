@@ -9,9 +9,14 @@
 </head>
 
 <body>
-    <h2>Rediger matrett</h2>
-
     <?php
+    if (!isset($_SERVER['PHP_AUTH_USER']) || !($_SERVER['PHP_AUTH_USER'] == "admin" && $_SERVER['PHP_AUTH_PW'] == "mikkel")) {
+        header('WWW-Authenticate: Basic realm="My Realm"');
+        header('HTTP/1.0 401 Unauthorized');
+        echo '<b>Du må logge inn for å få tilgang til denne siden</b>';
+        exit;
+    }
+    
     $servernavn = "localhost";
     $brukernavn = "root";
     $passord = "";
@@ -47,6 +52,8 @@
     $data = $tilkobling->query("SELECT * FROM matrett WHERE idmatrett = $id");
     $row = mysqli_fetch_array($data);
     ?>
+    
+    <h2>Rediger matrett</h2>
     
     <form action="" method="post">
     <table>
