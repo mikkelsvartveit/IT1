@@ -49,18 +49,6 @@
         <div class="flex flex-center">
             <video src="video/italienskmat.mp4" controls></video>
         </div>
-        
-        <div class="flex">
-            <div class="col-2">
-            
-            </div>
-            
-            <div class="col-2">
-                <h3>Bestill mat</h3>
-                <p>Velg forrett, hovedrett og dessert fra vår spennende og varierte meny. Deretter registrerer du deg med navn og klasse. Betaling skjer ved oppmøte.</p>
-                
-            </div>
-        </div>
     </div>
     
     <script>

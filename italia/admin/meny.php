@@ -27,14 +27,6 @@
     
     if(isset($_GET["slett"])) {
         $slettid = $_GET["slett"];
-        
-//        $sql = $tilkobling->query("SELECT bilde FROM matrett WHERE idmatrett=$slettid");
-//        if($row = mysqli_fetch_array($sql)) {
-//            if(file_exists("upload/" . $row["bilde"])) {
-//                unlink("upload/" . $row["bilde"]);
-//            }
-//        }
-        
         $tilkobling->query("DELETE FROM matrett WHERE idmatrett=$slettid");
     }
     ?>

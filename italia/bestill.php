@@ -29,158 +29,83 @@
         </div>
     </div>
     
+    <?php
+    $servernavn = "localhost";
+    $brukernavn = "root";
+    $passord = "";
+    $dbnavn = "italia";
+
+    $tilkobling = mysqli_connect($servernavn, $brukernavn, $passord, $dbnavn);
+
+    if($tilkobling->connect_error) {
+        die("Noe gikk galt: " . $tilkobling->connect_error);
+    }
+
+    $tilkobling->set_charset("utf8");
+    ?>
+    
     <div class="content">
         <h2 id="forretter">Forretter</h2>
         <div class="flex">
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
+            <?php 
+            $sql = "SELECT * FROM matrett WHERE type='f' ORDER BY navn";
+            $data = $tilkobling->query($sql);
+            
+            while($row = mysqli_fetch_array($data)) {
+            ?>
             
             <div class="col-3">
                 <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
+                    <h3><?php echo $row["navn"] ?></h3>
+                    <img src="<?php echo 'admin/upload/' . $row["bilde"]?>">
+                    <p><?php echo $row["informasjon"] ?></p>
+                    <a href="#">Velg rett</a>
                 </div>
             </div>
             
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
+            <?php } ?>
         </div>
         
         <h2 id="hovedretter">Hovedretter</h2>
         <div class="flex">
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
+            <?php 
+            $sql = "SELECT * FROM matrett WHERE type='h' ORDER BY navn";
+            $data = $tilkobling->query($sql);
+            
+            while($row = mysqli_fetch_array($data)) {
+            ?>
             
             <div class="col-3">
                 <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
+                    <h3><?php echo $row["navn"] ?></h3>
+                    <img src="<?php echo 'admin/upload/' . $row["bilde"]?>">
+                    <p><?php echo $row["informasjon"] ?></p>
+                    <a href="#">Velg rett</a>
                 </div>
             </div>
             
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
+            <?php } ?>
         </div>
         
         <h2 id="desserter">Desserter</h2>
         <div class="flex">
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
+            <?php 
+            $sql = "SELECT * FROM matrett WHERE type='d' ORDER BY navn";
+            $data = $tilkobling->query($sql);
+            
+            while($row = mysqli_fetch_array($data)) {
+            ?>
             
             <div class="col-3">
                 <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
+                    <h3><?php echo $row["navn"] ?></h3>
+                    <img src="<?php echo 'admin/upload/' . $row["bilde"]?>">
+                    <p><?php echo $row["informasjon"] ?></p>
+                    <a href="#">Velg rett</a>
                 </div>
             </div>
             
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
-            
-            <div class="col-3">
-                <div class="card">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="admin/upload/carbonara.jpg">
-                    <p>Spagetti, egg, parmesan og bacon.<a href="#">Velg rett</a></p>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
     
