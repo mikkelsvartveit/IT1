@@ -89,7 +89,7 @@
                     <b>Fornavn: </b><br><input type="text" name="fornavn" required><br>
                     <b>Etternavn: </b><br><input type="text" name="etternavn" required><br>
                     <b>Klasse: </b><br><input type="text" name="klasse" required><br><br>
-                    <input class="hidden" name="handlevogn" value="<?php echo $handlevognString ?>" disabled>
+                    <input class="hidden" name="handlevogn" value="<?php echo $handlevognString ?>">
                     <input class="button" type="submit" name="submit" value="Bekreft bestilling">
                 </form>
             </div>
