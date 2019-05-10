@@ -16,7 +16,7 @@
         <div class="menu-right">
             <a href="#lesmer">Info</a>
             <a href="bestill.php">Meny/bestill</a>
-            <a href="admin/meny.php" target="_blank">Admin</a>
+            <a href="admin" target="_blank">Admin</a>
         </div>
     </div>
     
@@ -31,12 +31,12 @@
     <div class="content" id="lesmer">
         <div class="flex">
             <div class="col-3">
-                <h3>Vår mat</h3>
+                <h3>Internasjonal uke</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure vero quam earum qui delectus, quia alias eligendi, quasi! A reprehenderit, perspiciatis beatae sint tempora voluptas? Fugiat sed ullam voluptas accusantium quas ratione facilis, ducimus quod nisi sunt, odio doloremque nesciunt perferendis, sit porro, nulla vero consequuntur! Dolore ratione, officia molestiae.</p>
             </div>
             
             <div class="col-3">
-                <h3>Lokale</h3>
+                <h3>Vår mat</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure vero quam earum qui delectus, quia alias eligendi, quasi! A reprehenderit, perspiciatis beatae sint tempora voluptas? Fugiat sed ullam voluptas accusantium quas ratione facilis, ducimus quod nisi sunt, odio doloremque nesciunt perferendis, sit porro, nulla vero consequuntur! Dolore ratione, officia molestiae.</p>
             </div>
             

@@ -16,17 +16,12 @@
         <div class="menu-right">
             <a href="index.php#lesmer">Info</a>
             <a href="#top">Meny/bestill</a>
-            <a href="admin/meny.php" target="_blank">Admin</a>
+            <a href="admin" target="_blank">Admin</a>
         </div>
     </div>
     
-    <div class="cover">
+    <div class="cover cover-half">
         <h1>Meny</h1>
-        <div>
-            <a href="#forretter">Forretter</a>
-            <a href="#hovedretter">Hovedretter</a>
-            <a href="#desserter">Desserter</a>
-        </div>
     </div>
     
     <?php
@@ -45,6 +40,12 @@
     ?>
     
     <div class="content">
+        <!-- <div class="center">
+            <a href="#forretter" class="button">Forretter</a>
+            <a href="#hovedretter" class="button">Hovedretter</a>
+            <a href="#desserter" class="button">Desserter</a>
+        </div> -->
+        
         <h2 id="forretter">Forretter</h2>
         <div class="flex">
             <?php 
@@ -110,6 +111,12 @@
             
             <?php } ?>
         </div>
+        
+        <div class="center">
+            <a href="javascript:bestill()" class="button">Gå videre</a>
+            <br>
+            <p id="error">Du må velge mat først!</p>
+        </div>
     </div>
     
     <script>
@@ -126,6 +133,16 @@
                 button.innerHTML = "Velg rett";
                 button.classList.remove("selected");
                 handlevogn.splice(handlevogn.indexOf(id), 1);
+            }
+        }
+        
+        function bestill() {
+            var handlevognString = handlevogn.join(",");
+            if(handlevognString) {
+                var url = "registrer.php?handlevogn=" + handlevognString;
+                location.href = url;
+            } else {
+                document.getElementById("error").style.display = "block";
             }
         }
         

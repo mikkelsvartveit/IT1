@@ -35,3 +35,31 @@ img {
 form {
     display: inline;
 }
+
+.center {
+    text-align: center;
+    font-size: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.flex a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    margin: 0 50px;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 0 10px #888;
+}
+
+.flex img {
+    width: 200px;
+    height: 200px;
+}
