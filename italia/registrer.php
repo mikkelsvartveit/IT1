@@ -88,7 +88,24 @@
                 <form action="bekreftelse.php" method="post">
                     <b>Fornavn: </b><br><input type="text" name="fornavn" required><br>
                     <b>Etternavn: </b><br><input type="text" name="etternavn" required><br>
-                    <b>Klasse: </b><br><input type="text" name="klasse" required><br><br>
+                    
+                    <select name="trinn" required>
+                        <option value="" disabled selected>--Velg trinn/ansatt--</option>
+                        <option value="vg1">VG1</option>
+                        <option value="vg2">VG2</option>
+                        <option value="vg3">VG3</option>
+                        <option value="ansatt">Ansatt</option>
+                    </select>
+                    
+                    <select name="ukedag" required>
+                        <option value="" disabled selected>--Velg dag--</option>
+                        <option value="mandag">Mandag</option>
+                        <option value="tirsdag">Tirsdag</option>
+                        <option value="onsdag">Onsdag</option>
+                        <option value="torsdag">Torsdag</option>
+                        <option value="fredag">Fredag</option>
+                    </select><br><br>
+                    
                     <input class="hidden" name="handlevogn" value="<?php echo $handlevognString ?>">
                     <input class="button" type="submit" name="submit" value="Bekreft bestilling">
                 </form>

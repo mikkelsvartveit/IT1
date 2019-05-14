@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Rediger matrett</title>
+    <title>Admin - Rediger matrett</title>
     <link href="admin.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
@@ -56,28 +56,28 @@
     <h2>Rediger matrett</h2>
     
     <form action="" method="post">
-    <table>
-        <tr>
-            <th>Bilde</th>
-            <th>Navn</th>
-            <th>Type</th>
-            <th>Pris</th>
-            <th>Beskrivelse</th>
-        </tr>
-        <tr>
-            <td><img src="upload/<?php echo $row["bilde"]?>"></td>
-            <td><input type="text" name="navn" value="<?php echo $row['navn']?>"></td>
-            <td>
-                <input type="radio" name="type" value="f" required>Forrett<br>
-                <input type="radio" name="type" value="h" required>Hovedrett<br>
-                <input type="radio" name="type" value="d" required>Dessert
-            </td>
-            <td><input type="number" name="pris" style="width: 80px" value="<?php echo $row['pris']?>"> kr</td>
-            <td><textarea name="informasjon" cols="30" rows="6"><?php echo $row['informasjon']?></textarea></td>
-        </tr>
-    </table>
-    <br>
-    <input type="submit" name="submit" value="Lagre">
+        <table>
+            <tr>
+                <th>Bilde</th>
+                <th>Navn</th>
+                <th>Type</th>
+                <th>Pris</th>
+                <th>Beskrivelse</th>
+            </tr>
+            <tr>
+                <td><img src="upload/<?php echo $row["bilde"]?>"></td>
+                <td><input type="text" name="navn" value="<?php echo $row['navn']?>"></td>
+                <td>
+                    <input type="radio" name="type" value="f" required>Forrett<br>
+                    <input type="radio" name="type" value="h" required>Hovedrett<br>
+                    <input type="radio" name="type" value="d" required>Dessert
+                </td>
+                <td><input type="number" name="pris" style="width: 80px" value="<?php echo $row['pris']?>"> kr</td>
+                <td><textarea name="informasjon" cols="30" rows="6"><?php echo $row['informasjon']?></textarea></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" name="submit" value="Lagre">
     </form>
     <button onclick="location.href = 'meny.php'">Avbryt</button>
     

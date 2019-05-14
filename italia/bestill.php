@@ -3,27 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bestill mat - Italiensk restaurant</title>
+    <title>Meny - Italiensk restaurant</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Open+Sans:300,400,600" rel="stylesheet"> 
 </head>
 
 <body id="top">
-    <div class="menu" id="menu">
-        <div class="menu-left">
-            <a href="index.php">Italiensk restaurant</a>
-        </div>
-        <div class="menu-right">
-            <a href="index.php#lesmer">Info</a>
-            <a href="#top">Meny/bestill</a>
-            <a href="admin" target="_blank">Admin</a>
-        </div>
-    </div>
-    
-    <div class="cover cover-half">
-        <h1>Meny</h1>
-    </div>
-    
     <?php
     $servernavn = "localhost";
     $brukernavn = "root";
@@ -39,17 +24,26 @@
     $tilkobling->set_charset("utf8");
     ?>
     
+    <div class="menu" id="menu">
+        <div class="menu-left">
+            <a href="index.php">Italiensk restaurant</a>
+        </div>
+        <div class="menu-right">
+            <a href="index.php#lesmer">Info</a>
+            <a href="#top">Meny/bestill</a>
+            <a href="admin" target="_blank">Admin</a>
+        </div>
+    </div>
+    
+    <div class="cover cover-half">
+        <h1>Meny</h1>
+    </div>
+    
     <div class="content">
-        <!-- <div class="center">
-            <a href="#forretter" class="button">Forretter</a>
-            <a href="#hovedretter" class="button">Hovedretter</a>
-            <a href="#desserter" class="button">Desserter</a>
-        </div> -->
-        
         <h2 id="forretter">Forretter</h2>
         <div class="flex">
             <?php 
-            $sql = "SELECT * FROM matrett WHERE type='f' ORDER BY navn";
+            $sql = "SELECT * FROM matrett WHERE type='f'";
             $data = $tilkobling->query($sql);
             
             while($row = mysqli_fetch_array($data)) {
@@ -71,7 +65,7 @@
         <h2 id="hovedretter">Hovedretter</h2>
         <div class="flex">
             <?php 
-            $sql = "SELECT * FROM matrett WHERE type='h' ORDER BY navn";
+            $sql = "SELECT * FROM matrett WHERE type='h'";
             $data = $tilkobling->query($sql);
             
             while($row = mysqli_fetch_array($data)) {
@@ -93,7 +87,7 @@
         <h2 id="desserter">Desserter</h2>
         <div class="flex">
             <?php 
-            $sql = "SELECT * FROM matrett WHERE type='d' ORDER BY navn";
+            $sql = "SELECT * FROM matrett WHERE type='d'";
             $data = $tilkobling->query($sql);
             
             while($row = mysqli_fetch_array($data)) {

@@ -21,12 +21,6 @@ h1 {
     text-align: center;
 }
 
-.cover h1 {
-    color: white;
-    margin-bottom: 30px;
-    font-size: 60px;
-}
-
 h2 {
     font-size: 40px;
     font-weight: 300;
@@ -40,13 +34,22 @@ h3 {
     color: #555;
 }
 
-video {
-    width: 70%;
-    margin: 50px;
+a {
+    color: #3276b5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 b {
     font-weight: 600;
+}
+
+video {
+    width: 70%;
+    margin: 50px;
 }
 
 form {
@@ -63,79 +66,37 @@ input {
     background-color: #FFF;
 }
 
+select {
+    margin: 15px 5px 0 0;
+    padding: 10px;
+    border: 2px solid #444;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    background-color: #FFF;
+}
+
 tr, th, td {
     font-size: 18px;
     padding: 0px 20px;
     text-align: left;
 }
 
-img.complete {
-    width: 250px;
-    text-align: center;
-    display: block;
-    margin: 20px auto;
-}
-
-.button {
-    font-family: "Montserrat";
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    color: #444;
-    background-color: #FFF;
-    padding: 15px 20px;
-    border: 2px solid #444;
-    margin: 10px auto;
-    transition-duration: 0.2s;
-}
-
-.button:hover {
-    color: #fff;
-    background-color: #444;
-}
-
-.cover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: lightblue;
-    flex-direction: column;
-    background-image: url(img/bakgrunn.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.cover a {
-    font-family: "Montserrat";
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    color: white;
-    padding: 15px 20px;
-    border: 2px solid white;
-    background-color: transparent;
-    margin: 10px;
-    transition-duration: 0.2s;
-}
-
-.cover a:hover {
-    color: #333;
-    background-color: #fff;
-}
-
-.cover-half {
-    height: 50vh;
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 30px 50px 30px;
 }
 
 .flex {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
 }
 
 .col-2 {
@@ -150,9 +111,13 @@ img.complete {
     box-sizing: border-box;
 }
 
-.flex-center {
-    justify-content: center;
-    align-items: center;
+.hidden {
+    display: none;
+}
+
+.center {
+    margin: 50px 0;
+    text-align: center;
 }
 
 .menu {
@@ -220,10 +185,45 @@ img.complete {
     float: right;
 }
 
-.content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 30px 50px 30px;
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url(img/bakgrunn.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.cover h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 60px;
+}
+
+.cover a {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    padding: 15px 20px;
+    border: 2px solid white;
+    background-color: transparent;
+    margin: 10px;
+    transition-duration: 0.2s;
+}
+
+.cover a:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.cover-half {
+    height: 50vh;
 }
 
 .card {
@@ -284,9 +284,25 @@ img.complete {
     border: 2px solid #446E44;
 }
 
-.center {
-    margin: 50px 0;
-    text-align: center;
+.button {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #444;
+    background-color: #FFF;
+    padding: 15px 20px;
+    border: 2px solid #444;
+    margin: 10px auto;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #444;
+    text-decoration: none;
 }
 
 p.big {
@@ -296,13 +312,16 @@ p.big {
     margin: 30px 0;
 }
 
+#complete {
+    width: 250px;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
 #error {
     margin-top: 30px;
     font-weight: 600;
     color: red;
-    display: none;
-}
-
-.hidden {
     display: none;
 }

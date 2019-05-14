@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Administrer meny</title>
+    <title>Administrator</title>
     <link href="admin.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>

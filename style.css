@@ -121,3 +121,15 @@ a {
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(sportssenteret/bilder/bakgrunn.jpg);
     background-size: cover;
 }
+
+#italia .front {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(italia/img/bakgrunn.jpg);
+    background-size: cover;
+}
+
+#italia .back {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(italia/img/bakgrunn.jpg);
+    background-size: cover;
+}

@@ -32,17 +32,17 @@
         <div class="flex">
             <div class="col-3">
                 <h3>Internasjonal uke</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure vero quam earum qui delectus, quia alias eligendi, quasi! A reprehenderit, perspiciatis beatae sint tempora voluptas? Fugiat sed ullam voluptas accusantium quas ratione facilis, ducimus quod nisi sunt, odio doloremque nesciunt perferendis, sit porro, nulla vero consequuntur! Dolore ratione, officia molestiae.</p>
+                <p>Det er tid for internasjonal uke på Oslofjorden VGS, og restaurant- og matfag skal servere mat for elever og ansatte med temaet italienske mattradisjoner. På denne nettsiden kan du lese mer om oss, se vår meny og forhåndsbestille mat fra oss.</p>
             </div>
             
             <div class="col-3">
                 <h3>Vår mat</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure vero quam earum qui delectus, quia alias eligendi, quasi! A reprehenderit, perspiciatis beatae sint tempora voluptas? Fugiat sed ullam voluptas accusantium quas ratione facilis, ducimus quod nisi sunt, odio doloremque nesciunt perferendis, sit porro, nulla vero consequuntur! Dolore ratione, officia molestiae.</p>
+                <p>Vår restaurant bruker råvarer av beste kvalitet til våre matretter. Råvarene blir nøye undersøkt og kvalitetssjekket før maten lages. Maten blir tilberedt og servert av våre flinke elever. Vi har satt sammen en meny med klassiske italienske retter. Velg forrett, hovedrett og dessert og forhåndsbestill mat allerede nå!</p>
             </div>
             
             <div class="col-3">
                 <h3>Om oss</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure vero quam earum qui delectus, quia alias eligendi, quasi! A reprehenderit, perspiciatis beatae sint tempora voluptas? Fugiat sed ullam voluptas accusantium quas ratione facilis, ducimus quod nisi sunt, odio doloremque nesciunt perferendis, sit porro, nulla vero consequuntur! Dolore ratione, officia molestiae.</p>
+                <p>Restaurant- og matfag på Oslofjorden VGS har til sammen 27 elever og 4 lærere fordelt på to årstrinn. Skal du snart søke VGS og er interessert i mer informasjon om restaurant- og matfag? Besøk <a href="http://restaurantogmatfag.no" target="_blank">restaurantogmatfag.no</a>.</p>
             </div>
         </div>
         

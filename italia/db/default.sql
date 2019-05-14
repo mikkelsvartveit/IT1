@@ -1,22 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.1.14
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 10. Mai, 2019 23:02 PM
--- Server-versjon: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: 14. Mai, 2019 19:02 p.m.
+-- Server-versjon: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `italia`
@@ -28,21 +26,23 @@ SET time_zone = "+00:00";
 -- Tabellstruktur for tabell `elev`
 --
 
-CREATE TABLE `elev` (
-  `idelev` int(11) NOT NULL,
-  `fornavn` varchar(45) DEFAULT NULL,
-  `etternavn` varchar(45) DEFAULT NULL,
-  `klasse` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `elev` (
+  `idelev` int(11) NOT NULL AUTO_INCREMENT,
+  `fornavn` varchar(45) NOT NULL,
+  `etternavn` varchar(45) NOT NULL,
+  `trinn` varchar(6) NOT NULL,
+  `ukedag` varchar(7) NOT NULL,
+  PRIMARY KEY (`idelev`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dataark for tabell `elev`
 --
 
-INSERT INTO `elev` (`idelev`, `fornavn`, `etternavn`, `klasse`) VALUES
-(1, 'Mikkel', 'Svartveit', '2STUC'),
-(2, 'Ole', 'Olsen', '1IDRA'),
-(3, 'Kari', 'Hansen', '3KDAA');
+INSERT INTO `elev` (`idelev`, `fornavn`, `etternavn`, `trinn`, `ukedag`) VALUES
+(1, 'Mikkel', 'Svartveit', 'vg2', 'onsdag'),
+(2, 'Ole', 'Olsen', 'ansatt', 'fredag'),
+(3, 'Kari', 'Nordmann', 'vg1', 'tirsdag');
 
 -- --------------------------------------------------------
 
@@ -50,10 +50,13 @@ INSERT INTO `elev` (`idelev`, `fornavn`, `etternavn`, `klasse`) VALUES
 -- Tabellstruktur for tabell `mat`
 --
 
-CREATE TABLE `mat` (
+CREATE TABLE IF NOT EXISTS `mat` (
   `matrett_idmatrett` int(11) NOT NULL,
-  `elev_idelev` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `elev_idelev` int(11) NOT NULL,
+  PRIMARY KEY (`matrett_idmatrett`,`elev_idelev`),
+  KEY `fk_matrett_has_elev_elev1_idx` (`elev_idelev`),
+  KEY `fk_matrett_has_elev_matrett_idx` (`matrett_idmatrett`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dataark for tabell `mat`
@@ -61,14 +64,14 @@ CREATE TABLE `mat` (
 
 INSERT INTO `mat` (`matrett_idmatrett`, `elev_idelev`) VALUES
 (1, 1),
-(1, 3),
-(2, 2),
-(4, 2),
-(6, 3),
 (8, 1),
 (9, 1),
-(10, 3),
-(11, 2);
+(2, 2),
+(4, 2),
+(11, 2),
+(1, 3),
+(5, 3),
+(10, 3);
 
 -- --------------------------------------------------------
 
@@ -76,14 +79,15 @@ INSERT INTO `mat` (`matrett_idmatrett`, `elev_idelev`) VALUES
 -- Tabellstruktur for tabell `matrett`
 --
 
-CREATE TABLE `matrett` (
-  `idmatrett` int(11) NOT NULL,
-  `navn` varchar(100) DEFAULT NULL,
+CREATE TABLE IF NOT EXISTS `matrett` (
+  `idmatrett` int(11) NOT NULL AUTO_INCREMENT,
+  `navn` varchar(100) NOT NULL,
   `informasjon` text,
-  `bilde` varchar(255) DEFAULT NULL,
-  `pris` int(11) DEFAULT NULL,
-  `type` varchar(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `bilde` varchar(255) NOT NULL,
+  `pris` int(11) NOT NULL,
+  `type` varchar(1) NOT NULL,
+  PRIMARY KEY (`idmatrett`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dataark for tabell `matrett`
@@ -103,44 +107,6 @@ INSERT INTO `matrett` (`idmatrett`, `navn`, `informasjon`, `bilde`, `pris`, `typ
 (11, 'Tiramisu', 'Fingerkjeks, kaffe og mascarpone-krem.', 'tiramisu.jpg', 70, 'd');
 
 --
--- Indexes for dumped tables
---
-
---
--- Indexes for table `elev`
---
-ALTER TABLE `elev`
-  ADD PRIMARY KEY (`idelev`);
-
---
--- Indexes for table `mat`
---
-ALTER TABLE `mat`
-  ADD PRIMARY KEY (`matrett_idmatrett`,`elev_idelev`),
-  ADD KEY `fk_matrett_has_elev_elev1_idx` (`elev_idelev`),
-  ADD KEY `fk_matrett_has_elev_matrett_idx` (`matrett_idmatrett`);
-
---
--- Indexes for table `matrett`
---
-ALTER TABLE `matrett`
-  ADD PRIMARY KEY (`idmatrett`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `elev`
---
-ALTER TABLE `elev`
-  MODIFY `idelev` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `matrett`
---
-ALTER TABLE `matrett`
-  MODIFY `idmatrett` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
---
 -- Begrensninger for dumpede tabeller
 --
 
@@ -148,9 +114,8 @@ ALTER TABLE `matrett`
 -- Begrensninger for tabell `mat`
 --
 ALTER TABLE `mat`
-  ADD CONSTRAINT `fk_matrett_has_elev_elev1` FOREIGN KEY (`elev_idelev`) REFERENCES `elev` (`idelev`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_matrett_has_elev_matrett` FOREIGN KEY (`matrett_idmatrett`) REFERENCES `matrett` (`idmatrett`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-COMMIT;
+  ADD CONSTRAINT `fk_matrett_has_elev_matrett` FOREIGN KEY (`matrett_idmatrett`) REFERENCES `matrett` (`idmatrett`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_matrett_has_elev_elev1` FOREIGN KEY (`elev_idelev`) REFERENCES `elev` (`idelev`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

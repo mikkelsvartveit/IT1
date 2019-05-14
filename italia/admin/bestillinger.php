@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Se påmeldinger</title>
+    <title>Admin - Se påmeldinger</title>
     <link href="admin.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
@@ -31,47 +31,45 @@
     $tilkobling->set_charset("utf8");
     ?>
     
-    <h1>Se påmeldinger</h1>
+    <p><a href="index.php">Tilbake</a></p>
+    <h1>Se bestillinger</h1>
     
-    <div>
-        <div>
-            <h2>Påmeldinger</h2>
-            <table>
-                <tr>
-                    <th>Fornavn</th>
-                    <th>Etternavn</th>
-                    <th>Klasse</th>
-                    <th>Matretter</th>
-                    <th>Sum</th>
-                </tr>
-                <?php 
-                $data = $tilkobling->query("SELECT * FROM elev ORDER BY etternavn, fornavn");
-                while($row = mysqli_fetch_array($data)) { 
+    <table>
+        <tr>
+            <th>Fornavn</th>
+            <th>Etternavn</th>
+            <th>Trinn</th>
+            <th>Dag</th>
+            <th>Matretter</th>
+            <th>Sum</th>
+        </tr>
+        <?php 
+        $data = $tilkobling->query("SELECT * FROM elev ORDER BY etternavn, fornavn");
+        while($row = mysqli_fetch_array($data)) { 
+        ?>
+        <tr>
+            <td><?php echo $row["fornavn"]?></td>
+            <td><?php echo $row["etternavn"]?></td>
+            <td><?php echo $row["trinn"]?></td>
+            <td><?php echo $row["ukedag"]?></td>
+            <td>
+                <ul>
+                <?php
+                $idelev = $row["idelev"];
+                $sql = "SELECT * FROM mat, matrett WHERE elev_idelev = $idelev AND idmatrett = matrett_idmatrett";
+                $data2 = $tilkobling->query($sql);
+                $pris = 0;
+                while($row2 = mysqli_fetch_array($data2)) {
+                    echo "<li>" . $row2["navn"] . "</li>";
+                    $pris += $row2["pris"];
+                }
                 ?>
-                <tr>
-                    <td><?php echo $row["fornavn"]?></td>
-                    <td><?php echo $row["etternavn"]?></td>
-                    <td><?php echo $row["klasse"]?></td>
-                    <td>
-                        <ul>
-                        <?php
-                        $idelev = $row["idelev"];
-                        $sql = "SELECT * FROM mat, matrett WHERE elev_idelev = $idelev AND idmatrett = matrett_idmatrett";
-                        $data2 = $tilkobling->query($sql);
-                        $pris = 0;
-                        while($row2 = mysqli_fetch_array($data2)) {
-                            echo "<li>" . $row2["navn"] . "</li>";
-                            $pris += $row2["pris"];
-                        }
-                        ?>
-                        </ul>
-                    </td>
-                    <td><?php echo "kr $pris,-" ?></td>
-                </tr>
-                <?php } ?>
-            </table>
-        </div>
-    </div>
+                </ul>
+            </td>
+            <td><?php echo "kr $pris,-" ?></td>
+        </tr>
+        <?php } ?>
+    </table>
 </body>
 
 </html>

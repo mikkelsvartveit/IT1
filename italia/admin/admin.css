@@ -16,6 +16,22 @@ h2 {
     font-weight: 400;
 }
 
+a {
+    font-size: 20px;
+    color: #3276b5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -26,19 +42,12 @@ th, td {
     max-width: 250px;
 }
 
-img {
-    width: 180px;
-    height: 120px;
-    object-fit: cover;
-}
-
 form {
     display: inline;
 }
 
 .center {
     text-align: center;
-    font-size: 20px;
 }
 
 .flex {
