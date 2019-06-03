@@ -27,7 +27,7 @@
         <a href="bestillinger.php">
             <img src="img/users.svg">
             <h2>Vis påmeldinger</h2>
-        </div>
+        </a>
     </div>
     <p class="center"><a href="../">Gå til forside</a></p>
 </body>
